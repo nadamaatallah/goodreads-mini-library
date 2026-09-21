@@ -1,0 +1,17 @@
+SELECT livre.titre, livre.genre, livre.annee_publication, livre.stock,
+       auteur.nom AS nom_auteur, auteur.prenom AS prenom_auteur
+FROM livre
+JOIN auteur ON livre.id_auteur = auteur.id_auteur
+ORDER BY livre.titre;
+
+SELECT adherent.nom, adherent.prenom, livre.titre, emprunt.date_emprunt, emprunt.date_retour_prevue
+FROM emprunt
+JOIN adherent ON emprunt.id_adherent = adherent.id_adherent
+JOIN livre ON emprunt.id_livre = livre.id_livre
+WHERE emprunt.date_retour IS NULL
+ORDER BY emprunt.date_emprunt;
+
+SELECT genre, COUNT(*) AS nombre_livres
+FROM livre
+GROUP BY genre
+ORDER BY nombre_livres DESC;

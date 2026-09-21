@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Accueil - Bibliothèque</title>
+    <link rel="stylesheet" media="screen" href="style.css">
+</head>
+<body>
+    <header class="goodreads-header">
+        <div class="goodreads-topbar">
+            <div class="site-logo">bibliothèque</div>
+
+            <nav class="main-nav">
+                <a href="index.html">Accueil</a>
+                <a href="presentation.html">Présentation</a>
+
+                <div class="dropdown">
+                    <a href="livres.php" class="dropdown-toggle">Catalogue ▾</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-column">
+                            <h4>Découvrir</h4>
+                            <a href="livres.php">Tous les livres</a>
+                            <a href="searchLivre.php">Rechercher un livre</a>
+                            <a href="ajouterLivre.php">Ajouter un livre</a>
+                            <a href="adherents.php">Emprunts en cours</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h4>Genres</h4>
+                            <a href="livres.php">Romans</a>
+                            <a href="livres.php">Philosophie</a>
+                            <a href="livres.php">Roman philosophique</a>
+                            <a href="livres.php">Philosophie politique</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="adherents.php">Adhérents</a>
+            </nav>
+
+            <div class="header-search">
+                <form action="searchLivre.php" method="POST">
+                    <input type="text" name="titre" placeholder="Rechercher un livre">
+                    <button type="submit" name="searchLivre" aria-label="Rechercher"></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="gr-home">
+        <aside class="gr-home-left">
+            <section class="gr-panel">
+                <h2 class="gr-panel-title">Lecture en cours</h2>
+
+                <div class="gr-book-mini">
+                    <img src="images/covers/crime-et-chatiment.jpg" alt="Crime et Châtiment">
+                    <div class="gr-book-mini-info">
+                        <h3>Crime et Châtiment</h3>
+                        <p>par Fiodor Dostoïevski</p>
+                        <a href="livres.php" class="gr-small-btn">Voir le catalogue</a>
+                    </div>
+                </div>
+
+                <div class="gr-panel-links">
+                    <a href="livres.php">Voir tous les livres</a>
+                    <a href="searchLivre.html">Ajouter un livre</a>
+                    <a href="adherents.php">Mise à jour générale</a>
+                </div>
+            </section>
+
+            <section class="gr-panel">
+                <h2 class="gr-panel-title">Défi lecture 2026</h2>
+                <p class="gr-panel-text">Mettez-vous au défi de lire davantage cette année.</p>
+
+                <div class="gr-challenge-box">
+                    <img src="images/reading-challenge.png" alt="Reading challenge 2026">
+                    
+                </div>
+            </section>
+
+            <section class="gr-panel">
+                <h2 class="gr-panel-title">Envie de lire</h2>
+
+                <div class="gr-shelf">
+                    <img src="images/covers/metamorphose.jpg" alt="Livre 1">
+                    <img src="images/covers/traite-sur-la-tolerance.jpg" alt="Livre 2">
+                    <img src="images/covers/ainsi-parlait-zarathoustra.jpg" alt="Livre 3">
+                </div>
+            </section>
+        </aside>
+
+        <section class="gr-home-center">
+            <article class="gr-banner-card">
+                <img src="images/readers-banner.png" alt="Lecteurs avec des livres">
+                <div class="gr-banner-content">
+                    <h1>Découvrez des lectures à emporter partout</h1>
+                    <p>
+                        Explorez une bibliothèque de classiques, de philosophie et de romans marquants.
+                        Recherchez un livre, consultez le catalogue et suivez les emprunts en cours.
+                    </p>
+                </div>
+            </article>
+
+            <section class="gr-feed">
+                <div class="gr-feed-header">
+                    <h2 class="gr-panel-title">Mises à jour</h2>
+                </div>
+
+                <article class="gr-update-card">
+                    <div class="gr-update-top">
+                        <div class="gr-update-meta">
+                            <p><strong>Inès Garcia</strong> souhaite lire</p>
+                        </div>
+                        <span class="gr-time">4 h</span>
+                    </div>
+
+                    <div class="gr-update-body">
+                        <img class="gr-update-cover" src="images/covers/classics.webp" alt="Livre mis en avant">
+
+                        <div class="gr-update-info">
+                            <h3>Les grands classiques à découvrir</h3>
+                            <p class="gr-author-line">Bibliothèque de littérature et philosophie</p>
+
+                            <div class="gr-want-row">
+                                <button type="button" class="gr-want-btn">Want to Read</button>
+                                <button type="button" class="gr-want-arrow" aria-label="Ouvrir les options">▼</button>
+                            </div>
+
+                            <p>
+                                Découvrez des œuvres majeures de Victor Hugo, Camus, Kafka,
+                                Tolstoï, Nietzsche, Platon, Rousseau et bien d’autres.
+                                <a href="presentation.html">Continuer la lecture</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="gr-update-actions">
+                        <a href="javascript:void(0)">Like</a>
+                        <span>·</span>
+                        <a href="javascript:void(0)">Comment</a>
+                    </div>
+
+                    <div class="gr-comment-box">
+                        <input type="text" placeholder="Écrire un commentaire...">
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <aside class="gr-home-right">
+            <section class="gr-panel">
+                <h2 class="gr-panel-title">Actualités & inspirations</h2>
+
+                <h3 class="gr-side-headline">Des lectures à ajouter à votre printemps</h3>
+                <img class="gr-side-image" src="images/bookmarks.png" alt="Illustrations lecture">
+                <p class="gr-side-caption">Une sélection visuelle inspirée de Goodreads.</p>
+            </section>
+
+            <section class="gr-panel">
+                <h2 class="gr-panel-title">Recommandations</h2>
+                <p class="gr-panel-text">Parce que vous aimez les grands classiques :</p>
+
+                <div class="gr-reco-card">
+                    <img src="images/covers/1984.jpg" alt="1984">
+                    <div>
+                        <h3>1984</h3>
+                        <p>de George Orwell</p>
+                        <div class="gr-rating">★★★★★ <span>4.20</span></div>
+                        <a href="livres.php" class="gr-green-btn">Want to Read</a>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </main>
+</body>
+</html>

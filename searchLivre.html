@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Rechercher un livre</title>
+    <link rel="stylesheet" media="screen" href="style.css">
+</head>
+<body>
+    <header class="goodreads-header">
+        <div class="goodreads-topbar">
+            <div class="site-logo">Bibliothèque</div>
+
+            <nav class="main-nav">
+                <a href="index.html">Accueil</a>
+                <a href="presentation.html">Présentation</a>
+
+                <div class="dropdown">
+                    <a href="livres.php" class="dropdown-toggle">Catalogue ▾</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-column">
+                            <h4>Découvrir</h4>
+                            <a href="livres.php">Tous les livres</a>
+                            <a href="searchLivre.php">Rechercher un livre</a>
+                            <a href="ajouterLivre.php">Ajouter un livre</a>
+                            <a href="adherents.php">Emprunts en cours</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h4>Genres</h4>
+                            <a href="livres.php">Romans</a>
+                            <a href="livres.php">Philosophie</a>
+                            <a href="livres.php">Roman philosophique</a>
+                            <a href="livres.php">Philosophie politique</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="adherents.php">Adhérents</a>
+            </nav>
+
+            <div class="header-search">
+                <form action="searchLivre.php" method="POST">
+                    <input type="text" name="titre" placeholder="Rechercher un livre">
+                    <button type="submit" name="searchLivre" class="siteHeader__searchIcon" aria-label="Rechercher"></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="container search-page">
+        <h1>Rechercher un livre</h1>
+        <p>Entrez le titre d’un ouvrage pour afficher sa couverture et ses informations.</p>
+
+        <form method="POST" action="searchLivre.php" class="search-form-centered">
+            <label for="titre">Titre du livre</label><br><br>
+            <input type="text" name="titre" id="titre" required>
+            <input type="submit" name="searchLivre" value="Rechercher">
+        </form>
+    </div>
+</body>
+</html>

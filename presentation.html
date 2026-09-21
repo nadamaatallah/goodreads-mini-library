@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Présentation - Bibliothèque</title>
+    <link rel="stylesheet" media="screen" href="style.css">
+</head>
+<body>
+    <header class="goodreads-header">
+        <div class="goodreads-topbar">
+            <div class="site-logo">Bibliothèque</div>
+
+            <nav class="main-nav">
+                <a href="index.html">Accueil</a>
+                <a href="presentation.html">Présentation</a>
+
+                <div class="dropdown">
+                    <a href="livres.php" class="dropdown-toggle">Catalogue ▾</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-column">
+                            <h4>Découvrir</h4>
+                            <a href="livres.php">Tous les livres</a>
+                            <a href="searchLivre.php">Rechercher un livre</a>
+                            <a href="ajouterLivre.php">Ajouter un livre</a>
+                            <a href="adherents.php">Emprunts en cours</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h4>Genres</h4>
+                            <a href="livres.php">Romans</a>
+                            <a href="livres.php">Philosophie</a>
+                            <a href="livres.php">Roman philosophique</a>
+                            <a href="livres.php">Philosophie politique</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="adherents.php">Adhérents</a>
+            </nav>
+
+            <div class="header-search">
+                <form action="searchLivre.php" method="POST">
+                    <input type="text" name="titre" placeholder="Rechercher un livre">
+                    <button type="submit" name="searchLivre"></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="gr-layout">
+        <aside class="gr-sidebar-left">
+            <h3 class="gr-section-title">APERÇU</h3>
+            <div class="gr-sidebar-box">
+                <p><strong>42</strong> livres disponibles</p>
+                <p><strong>20</strong> auteurs enregistrés</p>
+                <p><strong>10</strong> adhérents</p>
+                <p><strong>16</strong> emprunts suivis</p>
+            </div>
+
+            <h3 class="gr-section-title">CATÉGORIES</h3>
+            <div class="gr-sidebar-box">
+                <a href="#">Romans classiques</a>
+                <a href="#">Romans philosophiques</a>
+                <a href="#">Philosophie</a>
+                <a href="#">Philosophie politique</a>
+                <a href="#">Théâtre philosophique</a>
+            </div>
+        </aside>
+
+        <section class="gr-main-content">
+            <div class="gr-main-box">
+                <p class="gr-kicker">PRÉSENTATION DE LA BIBLIOTHÈQUE</p>
+                <h1>Un espace dédié aux classiques et à la pensée</h1>
+                <p class="gr-lead">
+                    Cette bibliothèque rassemble des œuvres majeures de littérature classique,
+                    de philosophie et de pensée politique. Elle a été conçue comme un espace
+                    simple, clair et agréable pour découvrir des auteurs essentiels,
+                    consulter des livres et suivre les emprunts.
+                </p>
+            </div>
+
+            <div class="gr-main-box">
+                <h2>Objectif du site</h2>
+                <p>
+                    Le site a été conçu pour représenter une bibliothèque numérique connectée
+                    à une base de données relationnelle. Il permet de consulter le catalogue,
+                    rechercher un ouvrage, visualiser les adhérents inscrits et suivre les
+                    emprunts en cours.
+                </p>
+            </div>
+
+            <div class="gr-main-box">
+                <h2>Fonctionnalités proposées</h2>
+                <div class="gr-feature-list">
+                    <div>Consulter les livres enregistrés dans la base</div>
+                    <div>Afficher les couvertures et les informations des ouvrages</div>
+                    <div>Rechercher un livre à partir de son titre</div>
+                    <div>Voir les adhérents inscrits</div>
+                    <div>Suivre les emprunts encore en cours</div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="gr-sidebar-right">
+            <h3 class="gr-section-title">AUTEURS PRÉSENTS</h3>
+            <div class="gr-sidebar-box">
+                <p>
+                    Victor Hugo, Albert Camus, Fiodor Dostoïevski, Franz Kafka,
+                    Léon Tolstoï, Friedrich Nietzsche, Platon, Jean-Paul Sartre,
+                    René Descartes, Jean-Jacques Rousseau, Aristote, Kant, Hegel,
+                    Heidegger, Simone de Beauvoir, Sénèque, Épicure, Montaigne,
+                    Pascal et Voltaire.
+                </p>
+            </div>
+
+            <h3 class="gr-section-title">À PROPOS DE LA COLLECTION</h3>
+            <div class="gr-sidebar-box">
+                <p>
+                    Le catalogue privilégie des textes fondateurs, durables et
+                    représentatifs de grands courants littéraires et philosophiques.
+                </p>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

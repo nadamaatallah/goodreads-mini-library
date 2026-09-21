@@ -1,0 +1,37 @@
+CREATE TABLE auteur (
+    id_auteur INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100),
+    prenom VARCHAR(100),
+    nationalite VARCHAR(100)
+);
+
+CREATE TABLE adherent (
+    id_adherent INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100),
+    prenom VARCHAR(100),
+    email VARCHAR(150),
+    date_inscription DATE
+);
+
+CREATE TABLE livre (
+    id_livre INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(255),
+    genre VARCHAR(100),
+    annee_publication INT,
+    stock INT,
+    id_auteur INT,
+    couverture VARCHAR(255),
+    FOREIGN KEY (id_auteur) REFERENCES auteur(id_auteur)
+);
+
+CREATE TABLE emprunt (
+    id_emprunt INT AUTO_INCREMENT PRIMARY KEY,
+    date_emprunt DATE,
+    date_retour_prevue DATE,
+    date_retour DATE,
+    id_adherent INT,
+    id_livre INT,
+    FOREIGN KEY (id_adherent) REFERENCES adherent(id_adherent),
+    FOREIGN KEY (id_livre) REFERENCES livre(id_livre)
+);
+
